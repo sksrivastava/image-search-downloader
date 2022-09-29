@@ -1,5 +1,6 @@
-# Details: Python scripts to download given no. of images on to the folder from google search engine
-# install all module before running
+# Python scripts to download any number of images from google search engine on to the local folder
+# User need to enter the search-keyword for image and total no. of image required
+# Install all module before running
 
 from bs4 import BeautifulSoup
 import os
@@ -50,12 +51,12 @@ def image_downloader(keyword='nature', num=5):
 
 if __name__ == '__main__':
     try:
-        keyword = input("Enter the search keyword for image: ")
-        num = int(input("Enter the number of image to be downloaded: "))
+        search_keyword = input("Enter the search keyword for image: ")
+        total_num = int(input("Enter the number of image to be downloaded: "))
         # input taken from system directly,  use below
-        # keyword = str(sys.argv[1])
-        # num = int(sys.argv[2])
-        image_downloader(keyword, num)
+        # search_keyword = str(sys.argv[1])
+        # total_num = int(sys.argv[2])
+        image_downloader(search_keyword, total_num)
     except KeyboardInterrupt:
         pass
     sys.exit()
